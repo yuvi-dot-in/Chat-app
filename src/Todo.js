@@ -8,8 +8,8 @@ function Todo(props) {
         <List className='todo_list'>
             <ListItem>
 
-                <ListItemText primary={props.todo.todo} secondary={props.todo.time} />
-                <DeleteRounded onClick={() => {db.collection('Todo').doc(props.todo.id).delete()}}/>
+                <ListItemText primary={props.todo.todo} secondary={props.todo.username} />
+                <DeleteRounded onClick={() => {db.collection(props.roomCode).doc(props.todo.id).delete();}}/>
                 {/* <Button ></Button> */}
             </ListItem>
         </List>
